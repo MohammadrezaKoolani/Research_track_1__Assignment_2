@@ -1,38 +1,74 @@
-# Research Track I - Second Assignment
+# Research_Track_1__Assignment_2
 The assignment consist of a development of a package that interact with a simulation of a simple robot in Gazebo. The package contains three nodes:
-- Node A: A node that implements an action client, allowing the user to set a target (x, y) or to cancel it. The node
+- Node A: 
+A node that implements an action client, allowing the user to set a target (x, y) or to cancel it. The node
 also publishes the robot position and velocity as a custom message (x,y, vel_x, vel_z), by relying on the values
 published on the topic /odom. Please consider that, if you cannot implement everything in the same node, you
 can also develop two different nodes, one implementing the user interface and one implementing the publisher
 of the custom message. 
-- Node B: A service node that, when called, prints the number of goals reached and cancelled.
-- Node C: A node that subscribes to the robot’s position and velocity (using the custom message) and prints the
+
+- Node B:
+ A service node that, when called, prints the number of goals reached and cancelled.
+
+- Node C: 
+A node that subscribes to the robot’s position and velocity (using the custom message) and prints the
 distance of the robot from the target and the robot’s average speed. Use a parameter to set how fast the
 node publishes the information. 
+
 - Has also been implemented a **.launch** file that starts the whole simulation and the Noe A. 
 
-*The launch file starts the simulator and the node in the same window so you can not correctly display the request for the location to be reached. Just press enter to have the request printed on the terminal again.*
 
-# Intalling & Run
-Clone this project and the simulation repository(https://github.com/CarmineD8/assignment_2_2022) inside a ROS workspace. Before starting anything you have to run the master process of ROS
-```bash
-  rocore
+
+# Installing and running
+The purpose of this assignment to develop a ROS package containing three ROS nodes that provide a way to interact with the environment presented in the assignment_2_2022 package. Python nodes were written for the assignment, as well as the directory and the CMakeList file were modified. A launch file was also developed for executing the code.
+
+The simulation requires the following steps for running:
+
+- A ROS Noetic
+- Run the ROS core by executing this command in terminal:
+```python
+roscore
+
 ```
-Then to start the simulation run the launch file
-```bash
+- Creat a ROS worksapace:
+```python
+mkdir -p ~/catkin_ws/src
+cd ~/catkin_ws/
+catkin_make
+```
+- Source the new setup.*sh file:
+```python
+source ~/catkin_ws/devel/setup.bash
+
+Move to the src folder of the workspace:
+```python
+ cd ~/catkin_ws/src   
+```
+```
+- Clone the package assignment_2_2022 which provides an implementation of an action server that moves a robot in the environment by implementing the bug0 algorithm:
+```python
+git clone https://github.com/CarmineD8/assignment_2_2022
+```
+- Clone the package of my solution for this assignmebt:
+```python
+git clone https://github.com/PeymanPP5530/final_RT1_2nd_assignment
+```
+- And finally:
+```python
+cd ~/catkin_ws 
+catkin_make
+```
+- Now, it is possible to run the whole project by running the launch file:
+```python
    roslaunch Assignment_2 assignment_2.launch
 ```
-To call process B or C:
-```bash
+- To call node B and node C:
+```python
   rosrun Assignment_2 node_b.py
   rosrun Assignment_2 node_c.py
 ```
 
-***Attention !*** To run correctly the package's node rename the package "Assignment_2"
-
-# How works
-- Process A: 
-```
+# Node A:
 Initialize object Pose() and Twist()
 global variable pub_info, target_reached, target_canceled, service, pub_target
 	
