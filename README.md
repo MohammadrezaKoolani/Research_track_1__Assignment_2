@@ -1,4 +1,4 @@
-# Research_Track_1__Assignment_2
+# Research_Track_2__Assignment_1&2
 The assignment consist of a development of a package that interact with a simulation of a simple robot in Gazebo. The package contains three nodes:
 - Node A: 
 A node that implements an action client, allowing the user to set a target (x, y) or to cancel it. The node
