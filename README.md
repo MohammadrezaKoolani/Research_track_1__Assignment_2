@@ -67,6 +67,56 @@ catkin_make
   rosrun Assignment_2 node_b.py
   rosrun Assignment_2 node_c.py
 ```
+# Jupyter Code Usage
+
+The Jupyter code file `jupyter_code.ipynb` provides a graphical interface and visualization capabilities. This README explains how to use the code and provides an overview of the included functions.
+
+## Usage
+
+To use the Jupyter code, follow these steps:
+
+1. Make sure you have Jupyter installed on your system.
+2. Open a terminal and navigate to the directory containing the `jupyter_code.ipynb` file.
+3. Launch Jupyter Notebook by running the command: `jupyter notebook`.
+4. The Jupyter Notebook interface will open in your web browser. Click on the `jupyter_code.ipynb` file to open it.
+5. Execute the code cells in the notebook to see the visualization and interact with the controls.
+
+## Functions Explanation
+
+The Jupyter code contains the following functions:
+
+### Visualiser Class
+
+- `__init__(self)`: Initializes the visualizer by creating a figure and axes for the plot.
+- `update_plot(self, x, y)`: Updates the plot with the current robot position `(x, y)`.
+- `set_target(self, event)`: Sets a new target position for the robot based on the clicked location on the plot.
+- `cancel_target(self, event)`: Cancels the current target position.
+- `start_visualizer()`: Starts the visualizer by creating the plot and connecting the event handlers.
+- `set_target_position(x, y)`: Sends a new target position `(x, y)` to Node A via a ROS service call.
+- `cancel_target()`: Cancels the current target position by sending a cancel signal to Node A via a ROS action client.
+
+#### VisualizerGoals Class
+
+- __init__(self): Initializes the visualizer for goal states by creating a figure and axes for the bar chart.
+- update(self, s, c): Updates the bar chart with the counts of successful and failed goals.
+    - s: The number of successful goals.
+    - c: The number of failed goals.
+
+## Interacting with the Environment
+
+To interact with the environment and control the robot, you can follow these steps:
+
+1. Run the ROS simulation and launch the package as described in the previous section.
+2. Open the Jupyter notebook jupyter_code.ipynb.
+3. Execute the code cells in the notebook to initialize the visualizer and create the plot.
+4. Click on the plot to set a new target position for the robot. The robot will start moving towards the clicked location.
+5. To cancel the current target position, click on the plot again.
+6. Repeat steps 4 and 5 to set new targets and cancel them as needed.
+7. The plot will update in real-time to show the current position of the robot.
+8. The bar chart will update to display the count of successful and failed goals.
+
+Feel free to explore the code and make any necessary modifications to suit your specific requirements.
+
 
 # Node A:
 Initialize object Pose() and Twist()
