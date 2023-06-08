@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RT2 First Assignemt’s Documentation! &mdash; RT2 First Assignemt 1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            RT2 First Assignemt
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">RT2 First Assignemt’s Documentation!</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+<li><a class="reference internal" href="#module-scripts.node_a">Node A</a></li>
+<li><a class="reference internal" href="#module-scripts.node_b">Node B</a></li>
+<li><a class="reference internal" href="#module-scripts.node_c">Node C</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">RT2 First Assignemt</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">RT2 First Assignemt’s Documentation!</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="rt2-first-assignemt-s-documentation">
+<h1>RT2 First Assignemt’s Documentation!<a class="headerlink" href="#rt2-first-assignemt-s-documentation" title="Permalink to this headline"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+<section id="module-scripts.node_a">
+<span id="node-a"></span><h1>Node A<a class="headerlink" href="#module-scripts.node_a" title="Permalink to this headline"></a></h1>
+<span class="target" id="module-node_a"></span><dl class="field-list simple">
+<dt class="field-odd">platform</dt>
+<dd class="field-odd"><p>Unix</p>
+</dd>
+<dt class="field-even">synopsis</dt>
+<dd class="field-even"><p>Python module</p>
+</dd>
+</dl>
+<p>A node that implements an action client, allowing the user to set a target (x, y) or to cancel it. The node also publishes the robot position and velocity as a custom message (x,y, vel_x, vel_z), by relying on the values published on the topic /odom. Please consider that, if you cannot implement everything in the same node, you can also develop two different nodes, one implementing the user interface and one implementing the publisher of the custom message.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.node_a.clbk_odom">
+<span class="sig-prename descclassname"><span class="pre">scripts.node_a.</span></span><span class="sig-name descname"><span class="pre">clbk_odom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/node_a.html#clbk_odom"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_a.clbk_odom" title="Permalink to this definition"></a></dt>
+<dd><p>Callback function for ‘/odom’ topic.
+Updates the position and velocity information.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.node_a.getCordinatesFromConsole">
+<span class="sig-prename descclassname"><span class="pre">scripts.node_a.</span></span><span class="sig-name descname"><span class="pre">getCordinatesFromConsole</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/node_a.html#getCordinatesFromConsole"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_a.getCordinatesFromConsole" title="Permalink to this definition"></a></dt>
+<dd><p>Prompts the user to enter target coordinates.
+Returns the x and y values as floats.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.node_a.get_info_goal">
+<span class="sig-prename descclassname"><span class="pre">scripts.node_a.</span></span><span class="sig-name descname"><span class="pre">get_info_goal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">req</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/node_a.html#get_info_goal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_a.get_info_goal" title="Permalink to this definition"></a></dt>
+<dd><p>Service callback function for ‘goal_info’ service.
+Returns the target reached and target canceled counts.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.node_a.ltk_tgt">
+<span class="sig-prename descclassname"><span class="pre">scripts.node_a.</span></span><span class="sig-name descname"><span class="pre">ltk_tgt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/node_a.html#ltk_tgt"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_a.ltk_tgt" title="Permalink to this definition"></a></dt>
+<dd><p>Publishes the target coordinates.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.node_a.main">
+<span class="sig-prename descclassname"><span class="pre">scripts.node_a.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/node_a.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_a.main" title="Permalink to this definition"></a></dt>
+<dd><p>Main function of node_a.
+- Initializes ROS node and necessary elements.
+- Sends goal requests to the server.
+- Handles user input for canceling the target.
+- Prints the target reached and target canceled counts.</p>
+</dd></dl>
+
+</section>
+<section id="module-scripts.node_b">
+<span id="node-b"></span><h1>Node B<a class="headerlink" href="#module-scripts.node_b" title="Permalink to this headline"></a></h1>
+<span class="target" id="module-node_b"></span><dl class="field-list simple">
+<dt class="field-odd">platform</dt>
+<dd class="field-odd"><p>Unix</p>
+</dd>
+<dt class="field-even">synopsis</dt>
+<dd class="field-even"><p>Python module</p>
+</dd>
+</dl>
+<p>A service node that, when called, prints the number of goals reached and cancelled.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.node_b.getInfoGoal">
+<span class="sig-prename descclassname"><span class="pre">scripts.node_b.</span></span><span class="sig-name descname"><span class="pre">getInfoGoal</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/node_b.html#getInfoGoal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_b.getInfoGoal" title="Permalink to this definition"></a></dt>
+<dd><p>Calls the ‘goal_info’ service and prints the target reached and target canceled counts.</p>
+</dd></dl>
+
+</section>
+<section id="module-scripts.node_c">
+<span id="node-c"></span><h1>Node C<a class="headerlink" href="#module-scripts.node_c" title="Permalink to this headline"></a></h1>
+<span class="target" id="module-node_c"></span><dl class="field-list simple">
+<dt class="field-odd">platform</dt>
+<dd class="field-odd"><p>Unix</p>
+</dd>
+<dt class="field-even">synopsis</dt>
+<dd class="field-even"><p>Python module</p>
+</dd>
+</dl>
+<p>A node that subscribes to the robotos position and velocity (using the custom message) and prints the distance of the robot from the target and the robotos average speed. Use a parameter to set how fast the node publishes the information.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.node_c.clbk_info">
+<span class="sig-prename descclassname"><span class="pre">scripts.node_c.</span></span><span class="sig-name descname"><span class="pre">clbk_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/node_c.html#clbk_info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_c.clbk_info" title="Permalink to this definition"></a></dt>
+<dd><p>Callback function for the ‘/bot_info’ topic subscriber.
+Calculates the average velocity and distance from the current position to the target position.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.node_c.clbk_tgt">
+<span class="sig-prename descclassname"><span class="pre">scripts.node_c.</span></span><span class="sig-name descname"><span class="pre">clbk_tgt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/node_c.html#clbk_tgt"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_c.clbk_tgt" title="Permalink to this definition"></a></dt>
+<dd><p>Callback function for the ‘/tgt’ topic subscriber.
+Updates the target position.</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Mohammadreza Koolani Koolani.mohammad@gmail.com.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
