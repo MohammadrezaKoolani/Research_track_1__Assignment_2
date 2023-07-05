@@ -18,6 +18,10 @@ node publishes the information.
 - Has also been implemented a **.launch** file that starts the whole simulation and the Noe A. 
 
 
+# Documentation URL
+https://mohammadrezakoolani.github.io/Research_track_1__Assignment_2/
+
+
 
 # Installing and running
 The purpose of this assignment to develop a ROS package containing three ROS nodes that provide a way to interact with the environment presented in the assignment_2_2022 package. Python nodes were written for the assignment, as well as the directory and the CMakeList file were modified. A launch file was also developed for executing the code.
